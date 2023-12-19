@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing | The Matt Cave</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Quicksand:wght@300&family=Raleway:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Beast.css">
+    <script src="https://kit.fontawesome.com/83c960c146.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Images/bored.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                </a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Software Engineer</p>
+            <h1>Hey! I'm <span>Matthew</span><br>from Houston</h1>
+        </div>
+    </div>
+</div>
+
+<!---------------   ABOUT SECTION   ---------------->
+<div id="about">
+    <div id="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/icon.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>Hi! I'm Matthew, a Haitian who is an aspiring Software Engineer who is passionate in all areas of life.  
+                    I enjoy finding creative uses for the talents I possess
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming languages</span><br>Exceptional in Python, HTML, CSS & JS <br> Experienced in C# and SQL</li>
+                        <li><span>Graphic Design</HTML></span><br>Web App Development</li>
+                        <li><span>App Development</span><br>Building Android/iOS Apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Work Experience</span><br>Nothing to see here... yet!</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020 - 2022</span><br>Houston Community College</li>
+                        <li><span>Fall 2022 - Current</span><br>University of Houston B.S. in Computer Information Systems</li>
+                        <li><span>Fall 2022 - Current</span><br>FreeCodeCamp</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------- Services ------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i> 
+                <h2>Web Design</h2>
+                <p>Designing Web pages and being all cool and all.
+                </p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-microchip"></i> 
+                <h2>Programming</h2>
+                <p>My natural line of coding.
+                </p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-palette"></i> 
+                <h2>Creative Work</h2>
+                <p>Where I dump other parts of my different passions.
+                </p>
+                <a href="#">learn more</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- ----------------- portfolio --------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="worklist">
+            <div class="work">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    
+</script>
+</body>
+</html>
